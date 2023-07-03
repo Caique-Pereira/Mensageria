@@ -1,10 +1,7 @@
 package com.aws.mensagaria.service;
 
-import java.security.Timestamp;
-import java.sql.Date;
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
-import java.util.concurrent.ExecutionException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +22,6 @@ public class KafkaDispacherService {
    
 	public String newMessage(String message)  {
 		m.setMessage(message);
-		m.setDate(LocalDateTime.now());
 		m.setStatus(MessageStatus.Enviando);
 		return publiser.newMessage(m).getDescricao();
 		 

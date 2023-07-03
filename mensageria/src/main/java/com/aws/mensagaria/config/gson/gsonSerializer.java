@@ -7,7 +7,7 @@ import com.google.gson.GsonBuilder;
 
 public class gsonSerializer<T> implements Serializer<T> {
 	
-	private Gson gson = new  GsonBuilder().create();
+	public Gson gson = new  GsonBuilder().create();
 	
 	@Override
 	public byte[] serialize(String topic, T data) {

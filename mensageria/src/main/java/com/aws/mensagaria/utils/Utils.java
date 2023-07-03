@@ -10,7 +10,7 @@ public class Utils {
 				return;
 			}
 			System.out.println( 
-					"offset : " + data.offset() + " /topico : " + data.topic() + "partition :" + data.partition());
+					"offset : " + data.offset() + " /topico : " + data.topic() + " partition :" + data.partition());
 		};
 
 }
